@@ -1,14 +1,13 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   
-  - init: sudo apt-get update && sudo apt-get -y install postgresql && npm install
-  
   - name: Setup DB
+    init: sudo apt-get update && sudo apt-get -y install postgresql && npm install
     command: docker-compose up
-    openMode: split-right
 
   - name: Migrate DB
     command: sleep 5s && npx knex migrate:latest
+    openMode: split-right
     
   - name: Connect to DB
     command: sleep 5s && psql --dbname=postgres --port=5432 --username=postgres --host=localhost
