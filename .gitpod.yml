@@ -6,10 +6,10 @@ tasks:
 
   - name: Migrate DB
     init: npm install
-    command: sleep 10s && npx knex migrate:latest
+    command: npx knex migrate:latest
     openMode: split-right
     
   - name: Connect to DB
     init: sudo apt-get update && sudo apt-get -y install postgresql
-    command: sleep 10s && psql --dbname=postgres --port=5432 --username=postgres --host=localhost
+    command: psql --dbname=postgres --port=5432 --username=postgres --host=localhost
     openMode: split-right

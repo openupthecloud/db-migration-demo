@@ -1,12 +1,16 @@
 # db-migration-demo
 
-* `\c postgres`
-* `\dt`
-* `SELECT * FROM knex_migrations;`
-* `npx knex migrate:up`
-* `npx knex migrate:down`
+A basic demo of a SQL database migration using Knex, demo'ed with Gitpod.io.
+
+[open in Gitpod](https://gitpod.io/#https://github.com/openupthecloud/db-migration-demo)
+
+* List tables in psql `\dt` (`\?` for help)
+* To migrate up: `npx knex migrate:up`
+* To migrate down: `npx knex migrate:down`
 
 ## Useful Links
 
 * https://hub.docker.com/_/postgres
 * https://knexjs.org/
+* https://gitpod.io/#https://github.com/openupthecloud/db-migration-demo
+* https://www.gitpod.io/docs/getting-started
