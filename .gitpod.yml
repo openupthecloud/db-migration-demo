@@ -1,7 +1,11 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - command: npm install
-  - command: echo 'hello world!'
+  - init: npm install
+  - name: Terminal 1
+    command: npm run test
+  - name: Terminal 2
+    command: npm run test
+    openMode: split-right
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
