@@ -2,13 +2,14 @@
 tasks:
   
   - name: Setup DB
-    init: sudo apt-get update && sudo apt-get -y install postgresql && npm install
     command: docker-compose up
 
   - name: Migrate DB
+    init: npm install
     command: sleep 5s && npx knex migrate:latest
     openMode: split-right
     
   - name: Connect to DB
+    init: sudo apt-get update && sudo apt-get -y install postgresql
     command: sleep 5s && psql --dbname=postgres --port=5432 --username=postgres --host=localhost
     openMode: split-right
