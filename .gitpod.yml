@@ -6,7 +6,7 @@ tasks:
 
   - name: Migrate DB
     init: npm install
-    command: npx knex migrate:latest
+    command: npx knex migrate:up
     openMode: split-right
     
   - name: Connect to DB
