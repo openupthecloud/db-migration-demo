@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/openupthecloud/db-migration-demo#readme",
   "dependencies": {
-    "knex": "^0.95.11"
+    "knex": "^0.95.11",
+    "pg": "^8.7.1"
   }
 }
